@@ -54,4 +54,6 @@ function createMarkup(obj) {
 
 function onError() {
     Notify.failure("Oops, there is no country with that name");
+    listEl.innerHTML = '';
+    infoEl.innerHTML = '';
 }
