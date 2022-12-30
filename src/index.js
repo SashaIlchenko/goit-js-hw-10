@@ -7,10 +7,11 @@ const DEBOUNCE_DELAY = 300;
 const inputEl = document.querySelector('#search-box');
 const listEl = document.querySelector('.country-list');
 const infoEl = document.querySelector('.country-info');
-console.log(fetchCountries);
+
 inputEl.addEventListener('input', debounce(onChangeInput, DEBOUNCE_DELAY));
+
 function onChangeInput(e) {
-    console.log(e.target.value);
+
     const name = e.target.value.trim();
     if (name) {
         fetchCountries(name)
